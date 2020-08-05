@@ -1,0 +1,11 @@
+<div *ngIf="!selectedVideo">loading...</div>
+<div *ngIf="selectedVideo" class="ui segment">
+  <div class="ui embed">
+    <youtube-player
+      [videoId]="selectedVideo.id.videoId"
+      suggestedQuality="highres"
+    ></youtube-player>
+  </div>
+  <h4 class="ui header">{{ selectedVideo.snippet.title }}</h4>
+  <p>{{ selectedVideo?.snippet.description }}</p>
+</div>

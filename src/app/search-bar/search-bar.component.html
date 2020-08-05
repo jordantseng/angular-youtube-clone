@@ -1,0 +1,8 @@
+<div class="search-bar ui segment">
+  <form class="ui form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="field">
+      <label>Video Search</label>
+      <input type="text" formControlName="term" />
+    </div>
+  </form>
+</div>

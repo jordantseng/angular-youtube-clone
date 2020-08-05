@@ -1,0 +1,14 @@
+<div class="ui relaxed divided list">
+  <app-video-item
+    class="video-item item"
+    *ngFor="let video of videos"
+    (click)="onVideoClick(video)"
+  >
+    <img
+      class="ui image"
+      videoImg
+      [src]="video.snippet.thumbnails.medium.url"
+    />
+    <div class="header" videoTitle>{{ video.snippet.title }}</div>
+  </app-video-item>
+</div>
